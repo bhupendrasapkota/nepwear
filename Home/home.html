@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed left-0 right-0 top-0 bg-transparent z-50 lg:px-10 font-aquire">
+      <!-- Navigation -->
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <!-- hamburger menu -->
+        <div class="md:hidden flex items-center">
+          <button
+            class="md:hidden text-black text-base hover:text-primary focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- logo and navigation links -->
+        <a href="#home">
+          <div class="flex items-center gap-2 pl-10 lg:pl-0">
+            <img
+              src="../Home/assets/logo.png"
+              alt="Nepwears Logo"
+              class="lg:h-20 h-14" />
+          </div>
+        </a>
+        <!-- navigation links -->
+        <div class="hidden md:flex space-x-4 uppercase text-xs">
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >shop by collection</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >best sellers</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >returns and exchanges</a
+          >
+        </div>
+        <!-- icons -->
+        <div class="md:flex space-x-4">
+          <a
+            href="#"
+            class="hidden lg:block hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-user"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-search"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-shopping-cart"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!--<hero section>-->
+      <section class="relative w-full">
+        <div class="relative w-full h-auto border-b border-black">
+          <!--link for products navigation-->
+          <a href="/products">
+            <!-- Desktop Image -->
+            <img
+              src="../Home/assets/hero.png"
+              alt="desktop Hero Image"
+              class="w-full h-full object-cover hidden lg:block md:block" />
+            <!-- Mobile Image -->
+            <img
+              src="../Home/assets/SummerSale.png"
+              alt="mobile Hero Image"
+              class="w-full h-full object-cover block lg:hidden md:hidden" />
+          </a>
+
+          <!-- Overlapping Centered Button -->
+          <button
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white shadow-lg p-4 border border-black flex items-center justify-center hover:bg-secondary transition duration-300">
+            <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!--Collection Section-->
+      <section class="w-full pt-20 md:p-20 lg:p-20 font-aquire">
+        <!-- Collection title and button -->
+        <div
+          class="flex flex-col gap-y-6 items-center mb-10 lg:flex-row lg:justify-between md:flex-row md:justify-between">
+          <!-- Collection Title -->
+          <h2 class="text-xl lg:text-2xl text-center uppercase">
+            join the nepwears club
+          </h2>
+          <!-- Button for product navigation -->
+          <button>
+            <a
+              href="/products"
+              class="border border-black text-black px-3 py-2 hover:bg-black hover:text-white transition duration-300">
+              Discover Now
+            </a>
+          </button>
+        </div>
+        <!-- Product Cards -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 p-2 lg:p-0 md:p-0">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="Product 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">shop all</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="Product 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">summer</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image3.webp"
+                alt="Product 3"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">winter</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image4.webp"
+                alt="Product 4"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">essentials</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals-->
+      <section class="w-full pt-20 md:p-20 lg:p-20 font-aquire bg-whitesmoke">
+        <!-- New Arrivals title and button -->
+        <div
+          class="flex flex-col gap-y-6 items-center mb-10 lg:flex-row lg:justify-between md:flex-row md:justify-between">
+          <!-- New Arrivals Title -->
+          <h2 class="text-xl lg:text-2xl text-center uppercase">
+            new arrivals
+          </h2>
+          <!-- Button for product navigation -->
+          <button>
+            <a
+              href="/products"
+              class="border border-black text-black px-3 py-2 hover:bg-black hover:text-white transition duration-300">
+              View All
+            </a>
+          </button>
+        </div>
+        <!-- Product Cards -->
+        <div class="grid grid-cols-3 gap-2 p-2 lg:p-0 md:p-0">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image5.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image6.webp"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image6.webp"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Most Loved Style-->
+      <section
+        class="w-full pt-20 pb-10 md:p-20 lg:p-20 font-aquire bg-whitesmoke">
+        <!-- Most Loved Styles title -->
+        <h2 class="text-xl lg:text-2xl text-center uppercase pb-10">
+          most loved styles
+        </h2>
+        <!-- Most Loved Product -->
+        <div class="flex justify-center items-center gap-10 p-2 lg:p-0 md:p-0">
+          <!-- Desktop Image -->
+          <div class="flex flex-col items-center hidden lg:block md:block">
+            <div class="w-full flex items-center justify-center">
+              <img
+                src="../Home/assets/image8.webp"
+                alt="Most Loved Product"
+                class="w-full h-auto max-w-md" />
+            </div>
+          </div>
+          <!-- Mobile Image -->
+          <div class="flex flex-col items-center gap-3">
+            <!-- Mobile Image -->
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image8.webp"
+                alt="Most Loved Product"
+                class="w-full h-auto max-w-xs transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <!-- Product Title-->
+            <h3 class="text-base uppercase">most loved product</h3>
+            <!-- Product Button -->
+            <button class="mt-2">
+              <a
+                href="/products"
+                class="border border-black text-black px-3 py-2 hover:bg-black hover:text-white transition duration-[300ms]">
+                View Product
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- trust -->
+      <section
+        class="w-full py-20 bg-white font-aquire hidden md:block lg:block">
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
+          <!-- Express Shipping -->
+          <div
+            class="flex flex-col items-center text-center px-6 border border-black">
+            <i class="fa fa-truck-fast text-3xl text-primary mb-2"></i>
+            <h4 class="text-lg font-light uppercase mb-1">Express Shipping</h4>
+            <p class="text-sm text-gray-600 font-light">
+              Fast & reliable delivery to your doorstep
+            </p>
+          </div>
+          <!-- Customer Experience -->
+          <div
+            class="flex flex-col items-center text-center px-6 border border-black">
+            <i class="fa fa-face-smile text-3xl text-primary mb-2"></i>
+            <h4 class="text-lg font-light uppercase mb-1">
+              Customer Experience
+            </h4>
+            <p class="text-sm text-gray-600 font-light">
+              We care about your satisfaction
+            </p>
+          </div>
+          <!-- Secure Payment -->
+          <div
+            class="flex flex-col items-center text-center px-6 border border-black">
+            <i class="fa fa-lock text-3xl text-primary mb-2"></i>
+            <h4 class="text-lg font-light uppercase mb-1">Secure Payment</h4>
+            <p class="text-sm text-gray-600 font-light">
+              Your transactions are safe with us
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-whitesmoke border-t border-black font-aquire">
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Quick Links -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Quick Links
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >What's Trending</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shop All</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Searches -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Popular Searches
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Summer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Winter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Spring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Essentials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Support
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Us -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Subscribe Us
+            </h5>
+            <p class="text-gray-600 text-sm md:text-xs mb-4">
+              Sign up to our newsletter to receive exclusive offers.
+            </p>
+            <form class="mb-6">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition duration-300 text-sm md:px-2 md:py-2 md:text-xs"
+                  required />
+                <button
+                  type="submit"
+                  class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition duration-300 uppercase text-sm font-medium md:px-3 md:py-2 md:text-xs">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-facebook-f text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-instagram text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200 pt-8">
+          <p class="text-center text-sm text-gray-500">© 2025 - Nepwears</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
