@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed left-0 right-0 top-0 bg-transparent z-50 lg:px-10 font-aquire">
+      <!-- Navigation -->
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <!-- hamburger menu -->
+        <div class="md:hidden flex items-center">
+          <button
+            class="md:hidden text-black text-base hover:text-primary focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- logo and navigation links -->
+        <a href="#Products">
+          <div class="flex items-center gap-2 pl-10 lg:pl-0">
+            <img
+              src="../Home/assets/logo.png"
+              alt="Nepwears Logo"
+              class="lg:h-20 h-14" />
+          </div>
+        </a>
+        <!-- navigation links -->
+        <div class="hidden md:flex space-x-4 uppercase text-xs">
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >shop by collection</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >best sellers</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >returns and exchanges</a
+          >
+        </div>
+        <!-- icons -->
+        <div class="md:flex space-x-4">
+          <a
+            href="#"
+            class="hidden lg:block hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-user"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-search"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-shopping-cart"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!--Products Section-->
+      <section class="font-aquire w-full pt-24 lg:pt-32 bg-white z-40">
+        <!-- Products Header (normal flow) -->
+        <div
+          class="container mx-auto px-4 mb-8 flex items-center justify-center">
+          <h2 class="text-xl">all products</h2>
+        </div>
+
+        <!-- Products Grid (sticky) -->
+        <div
+          class="sticky top-24 md:top-24 lg:top-28 bg-white z-40 border-t border-b border-black px-2 py-2 flex justify-between items-center">
+          <!-- Icons -->
+          <div class="hidden md:flex lg:flex space-x-2">
+            <a
+              href="#"
+              class="text-xl text-zinc-600 hover:text-black transition">
+              <i class="fa-solid fa-table-cells"></i>
+            </a>
+            <a
+              href="#"
+              class="text-xl text-zinc-600 hover:text-black transition">
+              <i class="fa-solid fa-table-cells"></i>
+            </a>
+            <a
+              href="#"
+              class="text-xl text-zinc-600 hover:text-black transition">
+              <i class="fa-solid fa-table-cells"></i>
+            </a>
+          </div>
+
+          <!-- Product Count -->
+          <h3 class="text-sm text-center md:pl-28 lg:pl-32">12 Products</h3>
+
+          <!-- Sort & Filter Buttons -->
+          <div class="flex items-center gap-x-2 lg:gap-x-4">
+            <button
+              class="text-xs border border-black px-4 py-1 hover:bg-secondary transition inline-flex items-center gap-1">
+              Sort by
+              <i class="fa fa-chevron-down text-xs"></i>
+            </button>
+            <button
+              class="text-xs border border-black px-4 py-1 hover:bg-secondary transition">
+              Filter
+            </button>
+          </div>
+        </div>
+
+        <!-- Your Products Grid or List -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4">
+          <!-- Product Card 1 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image1.webp"
+                alt="New Arrival 1"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 1</h3>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full flex items-center justify-center overflow-hidden mb-2">
+              <img
+                src="../Home/assets/image2.jpg"
+                alt="New Arrival 2"
+                class="w-full h-auto transition-transform duration-[2000ms] ease-in-out hover:scale-105" />
+            </div>
+            <h3 class="text-base uppercase">new arrival 2</h3>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div>
+          <nav class="flex justify-center m-10">
+            <ul class="flex space-x-2 flex">
+              <li
+                class="w-10 h-10 border border-black hover:bg-secondary transition">
+                <a
+                  href="#"
+                  class="text-black flex justify-center items-center w-full h-full hover:text-black transition duration-300"
+                  >1</a
+                >
+              </li>
+              <li
+                class="w-10 h-10 border border-black hover:bg-secondary transition">
+                <a
+                  href="#"
+                  class="text-black flex justify-center items-center w-full h-full hover:text-black transition duration-300"
+                  >2</a
+                >
+              </li>
+              <li
+                class="w-10 h-10 border border-black hover:bg-secondary transition">
+                <a
+                  href="#"
+                  class="text-black flex justify-center items-center w-full h-full hover:text-black transition duration-300">
+                  <i class="fa fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-whitesmoke border-t border-black font-aquire">
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Quick Links -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Quick Links
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >What's Trending</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shop All</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Searches -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Popular Searches
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Summer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Winter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Spring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Essentials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Support
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Us -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Subscribe Us
+            </h5>
+            <p class="text-gray-600 text-sm md:text-xs mb-4">
+              Sign up to our newsletter to receive exclusive offers.
+            </p>
+            <form class="mb-6">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition duration-300 text-sm md:px-2 md:py-2 md:text-xs"
+                  required />
+                <button
+                  type="submit"
+                  class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition duration-300 uppercase text-sm font-medium md:px-3 md:py-2 md:text-xs">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-facebook-f text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-instagram text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200 pt-8">
+          <p class="text-center text-sm text-gray-500">© 2025 - Nepwears</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
