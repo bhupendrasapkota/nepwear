@@ -93,52 +93,34 @@
 
     <!-- Main Content -->
     <main>
-      <section
-        class="flex items-center justify-center h-screen font-aquire">
-        <!-- Order Form -->
-        <form
-          class="flex flex-col bg-white p-12 md:min-w-[450px] lg:min-w-[500px] space-y-3 text-[20px] md:text-xs lg:text-base">
-          <!-- Order Header -->
-          <div class="flex flex-col items-center gap-4">
-            <h2 class="md:text-lg">Returns and Exchanges</h2>
-            <h6 class="text-xs lg:text-xs text-center">
-              Enter your order number and email or phone number to track your order:
-            </h6>
-          </div>
-          <!-- Order Number -->
-          <div class="mb-2 flex-wrap">
-            <input
-              type="text"
-              id="order-number"
-              name="order-number"
-              placeholder="Order Number"
-              required
-              class="flex items-center justify-center mt-1 w-full p-2 font-sans outline-none border focus:border-black placeholder:font-aquire text-sm lg:text-sm" />
-          </div>
-          <!-- Email or Phone Number -->
-          <div class="mb-2">
-            <input
-              type="text"
-              id="email-or-phone"
-              name="email-or-phone"
-              placeholder="Email or Phone Number"
-              required
-              class="flex items-center justify-center mt-1 w-full p-2 font-sans outline-none border focus:border-black placeholder:font-aquire lg:text-sm text-sm" />
-          </div>
-          <!-- Submit Button -->
+      <!--<hero section>-->
+      <section class="relative w-full">
+        <div class="relative w-full h-auto border-b border-black">
+          <!--link for products navigation-->
+          <a href="/products">
+            <!-- Desktop Image -->
+            <img
+              src="../Home/assets/hero.png"
+              alt="desktop Hero Image"
+              class="w-full h-full object-cover hidden lg:block md:block" />
+            <!-- Mobile Image -->
+            <img
+              src="../Home/assets/SummerSale.png"
+              alt="mobile Hero Image"
+              class="w-full h-full object-cover block lg:hidden md:hidden" />
+          </a>
+
+          <!-- Overlapping Centered Button -->
           <button
-            type="submit"
-            class="w-full bg-black text-white hover:bg-secondary hover:text-black py-2 transition duration-300 lg:text-sm text-sm">
-            Track Order
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white shadow-lg p-4 border border-black flex items-center justify-center hover:bg-secondary transition duration-300">
+            <i class="fa fa-chevron-down"></i>
           </button>
-          <!-- Contact Us Link -->
-          <p class="mt-4 text-center lg:text-xs text-xs">
-            Need help?
-            <a href="#" class="text-primary font-sm hover:text-black"
-              >Contact Us</a
-            >
-          </p>
-        </form>
+        </div>
+      </section>
+
+      <!-- photos section-->
+      <section>
+        
       </section>
     </main>
 
