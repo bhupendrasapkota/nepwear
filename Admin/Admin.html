@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hide-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+
+      .visible {
+        display: block;
+      }
+    </style>
+    <script>
+      function showDiv(divIdToShow) {
+        const allDivs = ["div1", "div2", "div3", "div4"];
+
+        allDivs.forEach((id) => {
+          const div = document.getElementById(id);
+          if (id === divIdToShow) {
+            div.classList.remove("hidden");
+            div.classList.add("visible");
+          } else {
+            div.classList.remove("visible");
+            div.classList.add("hidden");
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed left-0 right-0 top-0 bg-transparent z-50 lg:px-10 font-aquire">
+      <!-- Navigation -->
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <!-- hamburger menu -->
+        <div class="md:hidden flex items-center">
+          <button
+            class="md:hidden text-black text-base hover:text-primary focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- logo and navigation links -->
+        <a href="#Products">
+          <div class="flex items-center gap-2 pl-10 lg:pl-0">
+            <img
+              src="../Home/assets/logo.png"
+              alt="Nepwears Logo"
+              class="lg:h-20 h-14" />
+          </div>
+        </a>
+        <!-- navigation links -->
+        <div class="hidden md:flex space-x-4 uppercase text-xs">
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >shop by collection</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >best sellers</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >returns and exchanges</a
+          >
+        </div>
+        <!-- icons -->
+        <div class="md:flex space-x-4">
+          <a
+            href="#"
+            class="hidden lg:block hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-user"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-search"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-shopping-cart"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="container mx-auto font-aquire px-4 pt-24 lg:pt-32 pb-24">
+        <!-- Admin Dashboard -->
+        <div class="flex flex-col space-y-5">
+          <!-- Dashboard Header -->
+          <div class="text-center space-y-3">
+            <h1 class="text-2xl font-bold mb-2">Admin Dashboard</h1>
+            <p class="text-xs">Manage your store operations</p>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="p-6 border border-black">
+              <div class="flex items-center justify-between">
+                <div class="text-left">
+                  <p class="text-base font-bold">Total Orders</p>
+                  <p class="text-sm">1,234</p>
+                </div>
+                <div class="p-3 border border-black items-center">
+                  <i class="fas fa-shopping-cart text-black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 border border-black">
+              <div class="flex items-center justify-between">
+                <div class="text-left">
+                  <p class="text-base font-bold">Total Products</p>
+                  <p class="text-sm">1,234</p>
+                </div>
+                <div class="p-3 border border-black items-center">
+                  <i class="fas fa-box text-black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 border border-black">
+              <div class="flex items-center justify-between">
+                <div class="text-left">
+                  <p class="text-base font-bold">Total Users</p>
+                  <p class="text-sm">1,234</p>
+                </div>
+                <div class="p-3 border border-black items-center">
+                  <i class="fas fa-users text-black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 border border-black">
+              <div class="flex items-center justify-between">
+                <div class="text-left">
+                  <p class="text-base font-bold">Total Revenue</p>
+                  <p class="text-sm">Rs 10,234</p>
+                </div>
+                <div class="p-3 border border-black items-center">
+                  <i class="fas fa-dollar-sign text-black"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CRUD Operations Tabs -->
+          <div class="border border-black">
+            <!-- CRUD Buttons -->
+            <div class="border-b border-black">
+              <nav class="flex items-center justify-around">
+                <button
+                  class="py-4 px-1 text-black text-center font-medium text-sm"
+                  onclick="showDiv('div1')">
+                  Products
+                </button>
+                <button
+                  class="py-4 px-1 text-black text-center font-medium text-sm"
+                  onclick="showDiv('div2')">
+                  Orders
+                </button>
+                <button
+                  class="py-4 px-1 text-black text-center font-medium text-sm"
+                  onclick="showDiv('div3')">
+                  Users
+                </button>
+                <button
+                  class="py-4 px-1 text-black text-center font-medium text-sm"
+                  onclick="showDiv('div4')">
+                  Categories
+                </button>
+              </nav>
+            </div>
+            <!--Admin CRUD Management -->
+            <div class="p-6">
+              <!-- Product Management-->
+              <div class="product-management visible" id="div1">
+                <!-- product add Action Buttons -->
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="font-semibold text-gray-800">
+                    Product Management
+                  </h3>
+                  <button
+                    class="bg-black text-white text-xs px-4 py-2 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2">
+                    <i class="fas fa-plus"></i>
+                    New Product
+                  </button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="flex flex-col md:flex-row gap-4 pb-4">
+                  <div class="md:flex-[2]">
+                    <input
+                      type="text"
+                      placeholder="Search products..."
+                      class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black font-sans" />
+                  </div>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Categories</option>
+                    <option>Summer Collection</option>
+                    <option>Winter Collection</option>
+                    <option>Essentials</option>
+                  </select>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                    <option>Out of Stock</option>
+                  </select>
+                </div>
+
+                <!-- Products table -->
+                <div class="overflow-x-auto hide-scrollbar">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Product
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Category
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Price
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Stock
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Status
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-md object-cover"
+                                src="../Home/assets/image1.webp"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Summer T-Shirt
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                SKU: ST001
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Summer Collection
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          RS 29.99
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          45
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-md object-cover"
+                                src="../Home/assets/image1.webp"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Summer T-Shirt
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                SKU: ST001
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Summer Collection
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          RS 29.99
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          45
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-md object-cover"
+                                src="../Home/assets/image1.webp"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Summer T-Shirt
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                SKU: ST001
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Summer Collection
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          RS 29.99
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          45
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex items-center justify-center gap-2 mt-6">
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Previous
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-black border border-black">
+                    1
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Next
+                  </button>
+                </div>
+              </div>
+
+              <!-- Orders Management -->
+              <div class="orders-management hidden" id="div2">
+                <!-- Orders Action Buttons -->
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="font-semibold text-gray-800">Orders Management</h3>
+                  <button
+                    class="bg-black text-white text-xs px-4 py-2 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2">
+                    <i class="fas fa-plus"></i>
+                    New Order
+                  </button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="flex flex-col md:flex-row gap-4 pb-4">
+                  <div class="md:flex-[2]">
+                    <input
+                      type="text"
+                      placeholder="Search orders..."
+                      class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black font-sans" />
+                  </div>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Status</option>
+                    <option>Pending</option>
+                    <option>Processing</option>
+                    <option>Shipped</option>
+                    <option>Delivered</option>
+                    <option>Cancelled</option>
+                  </select>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Payment</option>
+                    <option>Paid</option>
+                    <option>Pending</option>
+                    <option>Failed</option>
+                  </select>
+                </div>
+
+                <!-- Orders table -->
+                <div class="overflow-x-auto hide-scrollbar">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Order ID
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Customer
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Date
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Total
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Status
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Payment
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          #ORD001
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-full object-cover"
+                                src="../Home/assets/constributors/aarya.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                John Doe
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                john@example.com
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-15
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Rs 1,299.99
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                            Processing
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Paid
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          #ORD002
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-full object-cover"
+                                src="../Home/assets/constributors/anish.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Jane Smith
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                jane@example.com
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-14
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Rs 899.99
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Delivered
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Paid
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          #ORD003
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-full object-cover"
+                                src="../Home/assets/constributors/bhupendra.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Mike Johnson
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                mike@example.com
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-13
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Rs 2,199.99
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                            Pending
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                            Pending
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex items-center justify-center gap-2 mt-6">
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Previous
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-black border border-black">
+                    1
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Next
+                  </button>
+                </div>
+              </div>
+
+              <!-- Users Management -->
+              <div class="users-management hidden" id="div3">
+                <!-- Users Action Buttons -->
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="font-semibold text-gray-800">Users Management</h3>
+                  <button
+                    class="bg-black text-white text-xs px-4 py-2 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2">
+                    <i class="fas fa-plus"></i>
+                    New User
+                  </button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="flex flex-col md:flex-row gap-4 pb-4">
+                  <div class="md:flex-[2]">
+                    <input
+                      type="text"
+                      placeholder="Search users..."
+                      class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black font-sans" />
+                  </div>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Roles</option>
+                    <option>Admin</option>
+                    <option>Customer</option>
+                    <option>Guest</option>
+                  </select>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                    <option>Suspended</option>
+                  </select>
+                </div>
+
+                <!-- Users table -->
+                <div class="overflow-x-auto hide-scrollbar">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          User
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Email
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Role
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Joined
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Status
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-full object-cover"
+                                src="../Home/assets/constributors/aarya.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                John Doe
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                +977 9841234567
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          john@example.com
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Customer
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-10
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-full object-cover"
+                                src="../Home/assets/constributors/anish.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Jane Smith
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                +977 9841234568
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          jane@example.com
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Admin
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-05
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-full object-cover"
+                                src="../Home/assets/constributors/bhupendra.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Mike Johnson
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                +977 9841234569
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          mike@example.com
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Customer
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-08
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                            Suspended
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex items-center justify-center gap-2 mt-6">
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Previous
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-black border border-black">
+                    1
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Next
+                  </button>
+                </div>
+              </div>
+
+              <!-- Categories Management -->
+              <div class="categories-management hidden" id="div4">
+                <!-- Categories Action Buttons -->
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="font-semibold text-gray-800">
+                    Categories Management
+                  </h3>
+                  <button
+                    class="bg-black text-white text-xs px-4 py-2 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2">
+                    <i class="fas fa-plus"></i>
+                    New Category
+                  </button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="flex flex-col md:flex-row gap-4 pb-4">
+                  <div class="md:flex-[2]">
+                    <input
+                      type="text"
+                      placeholder="Search categories..."
+                      class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black font-sans" />
+                  </div>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                  </select>
+                  <select
+                    class="appearance-none px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
+                    <option>All Types</option>
+                    <option>Main Category</option>
+                    <option>Sub Category</option>
+                  </select>
+                </div>
+
+                <!-- Categories table -->
+                <div class="overflow-x-auto hide-scrollbar">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Category
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Type
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Products
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Created
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Status
+                        </th>
+                        <th
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-md object-cover"
+                                src="../Home/assets/image1.webp"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Summer Collection
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                Seasonal category
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Main Category
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          45
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-01
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-md object-cover"
+                                src="../Home/assets/image2.jpg"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Winter Collection
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                Seasonal category
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Main Category
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          32
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-02
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                              <img
+                                class="h-10 w-10 rounded-md object-cover"
+                                src="../Home/assets/image3.webp"
+                                alt="" />
+                            </div>
+                            <div class="ml-4">
+                              <div class="text-sm font-medium text-gray-900">
+                                Essentials
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                Basic category
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          Main Category
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          28
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          2024-01-03
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <span
+                            class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                            Inactive
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <div class="flex space-x-2">
+                            <button class="text-blue-600 hover:text-blue-900">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="text-red-600 hover:text-red-900">
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="text-gray-600 hover:text-gray-900">
+                              <i class="fas fa-eye"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex items-center justify-center gap-2 mt-6">
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Previous
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-black border border-black">
+                    1
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-black hover:bg-secondary">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-whitesmoke border-t border-black font-aquire">
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Quick Links -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Quick Links
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >What's Trending</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shop All</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Searches -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Popular Searches
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Summer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Winter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Spring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Essentials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Support
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Us -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Subscribe Us
+            </h5>
+            <p class="text-gray-600 text-sm md:text-xs mb-4">
+              Sign up to our newsletter to receive exclusive offers.
+            </p>
+            <form class="mb-6">
+              <div class="flex flex-col gap-2 lg:flex-row lg:gap-0">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition duration-300 text-xs md:px-2 md:py-2 md:text-xs"
+                  required />
+                <button
+                  type="submit"
+                  class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition duration-300 uppercase text-xs font-medium md:px-3 md:py-2 md:text-xs">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-facebook-f text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-instagram text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200 pt-8">
+          <p class="text-center text-sm text-gray-500">© 2025 - Nepwears</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
