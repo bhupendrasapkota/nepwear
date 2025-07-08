@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hide-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <section
+        class="fixed top-0 right-0 h-full w-full max-w-md bg-white border-l border-gray-300 shadow-2xl z-50 font-aquire flex flex-col">
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-8 pt-8 pb-10 border border-b-black">
+          <h2 class="text-xl md:text-2xl tracking-widest font-semibold">
+            CART
+          </h2>
+          <button>
+            <i class="fa fa-times text-2xl" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- Cart Items -->
+        <div class="px-8 flex-1 overflow-y-auto hide-scrollbar">
+          <!-- Cart Item -->
+          <div class="flex items-center gap-4 py-6 border-b border-gray-200">
+            <img
+              src="../Home/assets/image1.webp"
+              alt="Product"
+              class="w-16 h-22 object-cover" />
+            <div class="flex-1">
+              <div class="font-semibold text-xs">Product Name</div>
+              <div class="text-gray-500 text-xs mb-1">Color: Black</div>
+              <div class="text-gray-500 text-xs mb-2">Size: M</div>
+              <div class="flex items-center gap-2">
+                <i
+                  class="fa fa-minus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+
+                <span class="px-2">1</span>
+                <i
+                  class="fa fa-plus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="tracking-widest">₹999</span>
+              <button
+                class="hover:text-black mt-2 p-2 w-10 border border-black hover:bg-black hover:text-white">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 py-6 border-b border-gray-200">
+            <img
+              src="../Home/assets/image1.webp"
+              alt="Product"
+              class="w-16 h-22 object-cover" />
+            <div class="flex-1">
+              <div class="font-semibold text-xs">Product Name</div>
+              <div class="text-gray-500 text-xs mb-1">Color: Black</div>
+              <div class="text-gray-500 text-xs mb-2">Size: M</div>
+              <div class="flex items-center gap-2">
+                <i
+                  class="fa fa-minus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+
+                <span class="px-2">1</span>
+                <i
+                  class="fa fa-plus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="tracking-widest">₹999</span>
+              <button
+                class="hover:text-black mt-2 p-2 w-10 border border-black hover:bg-black hover:text-white">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 py-6 border-b border-gray-200">
+            <img
+              src="../Home/assets/image1.webp"
+              alt="Product"
+              class="w-16 h-22 object-cover" />
+            <div class="flex-1">
+              <div class="font-semibold text-xs">Product Name</div>
+              <div class="text-gray-500 text-xs mb-1">Color: Black</div>
+              <div class="text-gray-500 text-xs mb-2">Size: M</div>
+              <div class="flex items-center gap-2">
+                <i
+                  class="fa fa-minus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+
+                <span class="px-2">1</span>
+                <i
+                  class="fa fa-plus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="tracking-widest">₹999</span>
+              <button
+                class="hover:text-black mt-2 p-2 w-10 border border-black hover:bg-black hover:text-white">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 py-6 border-b border-gray-200">
+            <img
+              src="../Home/assets/image1.webp"
+              alt="Product"
+              class="w-16 h-22 object-cover" />
+            <div class="flex-1">
+              <div class="font-semibold text-xs">Product Name</div>
+              <div class="text-gray-500 text-xs mb-1">Color: Black</div>
+              <div class="text-gray-500 text-xs mb-2">Size: M</div>
+              <div class="flex items-center gap-2">
+                <i
+                  class="fa fa-minus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+
+                <span class="px-2">1</span>
+                <i
+                  class="fa fa-plus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="tracking-widest">₹999</span>
+              <button
+                class="hover:text-black mt-2 p-2 w-10 border border-black hover:bg-black hover:text-white">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 py-6 border-b border-gray-200">
+            <img
+              src="../Home/assets/image1.webp"
+              alt="Product"
+              class="w-16 h-22 object-cover" />
+            <div class="flex-1">
+              <div class="font-semibold text-xs">Product Name</div>
+              <div class="text-gray-500 text-xs mb-1">Color: Black</div>
+              <div class="text-gray-500 text-xs mb-2">Size: M</div>
+              <div class="flex items-center gap-2">
+                <i
+                  class="fa fa-minus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+
+                <span class="px-2">1</span>
+                <i
+                  class="fa fa-plus px-2 py-1 border border-gray-300 hover:bg-black hover:text-white transition duration-300"
+                  aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="tracking-widest">₹999</span>
+              <button
+                class="hover:text-black mt-2 p-2 w-10 border border-black hover:bg-black hover:text-white">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Cart Summary -->
+        <div class="px-8 pb-8 pt-6 border-t border-black">
+          <div
+            class="flex justify-between font-semibold text-base mb-4 tracking-widest">
+            <span>Total</span>
+            <span>₹1049</span>
+          </div>
+          <button
+            class="w-full bg-black text-white py-4 tracking-widest text-base font-semibold uppercase hover:bg-white hover:text-black transition duration-300 border hover:border-black">
+            Checkout
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

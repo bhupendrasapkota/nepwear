@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hide-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div
+        id="mobileMenuOverlay"
+        class="fixed top-0 left-0 h-full w-3/4 bg-white z-50 flex flex-col border-r border-gray-300 shadow-2xl font-aquire">
+        <div class="flex justify-between items-center p-6">
+          <!-- Logo or icon -->
+          <div>
+            <img src="../Home/assets/logo.png" alt="Logo" class="h-20" />
+          </div>
+          <!-- Close button -->
+          <i class="fa fa-times text-3xl" aria-hidden="true"></i>
+        </div>
+        <nav class="flex flex-col gap-10 mt-10 px-8 text-xl">
+          <div class="relative">
+            <button
+              id="shopBtn"
+              type="button"
+              class="w-full flex items-center justify-between hover:text-primary focus:outline-none">
+              SHOP
+              <i
+                class="fa fa-arrow-right text-2xl"
+                id="shopArrow"
+                aria-hidden="true"></i>
+            </button>
+            <!-- Submenu -->
+            <div
+              class="ml-2 mt-4 flex flex-col gap-4 text-sm max-h-0 overflow-hidden opacity-0"
+              id="shopSubmenu">
+              <a href="#" class="hover:text-primary">Shop All</a>
+              <a href="#" class="hover:text-primary">Summer</a>
+              <a href="#" class="hover:text-primary">Winter</a>
+              <a href="#" class="hover:text-primary">Essential</a>
+            </div>
+          </div>
+          <a href="#" class="hover:text-primary">BEST SELLERS</a>
+          <a href="#" class="hover:text-primary">NEW ARRIVALS</a>
+          <a href="#" class="hover:text-primary">RETURN AND EXCHANGES</a>
+          <a href="#" class="hover:text-primary">ABOUT US</a>
+        </nav>
+      </div>
+    </main>
+  </body>
+</html>

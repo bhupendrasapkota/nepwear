@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Sort Modal -->
+      <section class="fixed inset-0 z-50 font-aquire flex items-end md:hidden">
+        <!-- heading sort with close icon and buttons-->
+        <div
+          class="w-full bg-white p-6 pb-10 border-t border-gray-300 shadow-2xl">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-bold">Sort By</h2>
+            <i class="fa fa-times text-xl" aria-hidden="true"></i>
+          </div>
+          <!-- sort Buttons -->
+          <ul class="space-y-2">
+            <li>
+              <button
+                class="w-full text-left py-2 px-4 hover:bg-black hover:text-white transition duration-300">
+                Price: Low to High
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left py-2 px-4 hover:bg-black hover:text-white transition duration-300">
+                Price: High to Low
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left py-2 px-4 hover:bg-black hover:text-white transition duration-300">
+                Newest
+              </button>
+            </li>
+            <li>
+              <button
+                class="w-full text-left py-2 px-4 hover:bg-black hover:text-white transition duration-300">
+                Oldest
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

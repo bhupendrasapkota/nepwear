@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hide-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div
+        class="fixed top-0 right-0 h-full w-3/4 max-w-md bg-white border-l border-gray-300 shadow-2xl z-50 font-aquire flex flex-col overflow-y-auto hide-scrollbar">
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-8 pt-8 pb-10 border border-b-black">
+          <h2 class="text-xl md:text-2xl tracking-widest font-semibold">
+            FILTERS
+          </h2>
+          <button>
+            <i class="fa fa-times text-2xl" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Availability -->
+        <div class="px-8 mb-6 mt-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="uppercase text-xs tracking-widest font-semibold"
+              >AVAILABILITY</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" value="" class="sr-only peer" />
+              <div
+                class="w-11 h-6 bg-black rounded-full peer peer-focus:ring-2 peer-focus:ring-black dark:bg-gray-700 peer-checked:bg-black transition"></div>
+              <div
+                class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition peer-checked:translate-x-5"></div>
+            </label>
+            <span class="text-gray-400 text-sm">In stock only</span>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="px-8 mb-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="uppercase text-xs tracking-widest font-semibold"
+              >CATEGORIES</span
+            >
+          </div>
+          <div class="flex flex-col gap-2 text-xs lg:text-base text-black">
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />T-Shirts</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Hoodies</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Jackets</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Pants</label
+            >
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="px-8 mb-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="uppercase text-xs tracking-widest font-semibold"
+              >PRICE</span
+            >
+          </div>
+          <!-- Range slider (UI only) -->
+          <div class="flex items-center mb-4">
+            <input
+              type="range"
+              min="0"
+              max="2899"
+              value="0"
+              class="w-full accent-primary" />
+            <input
+              type="range"
+              min="0"
+              max="2899"
+              value="2899"
+              class="w-full accent-primary" />
+          </div>
+          <div class="flex items-center gap-2">
+            <div
+              class="flex items-center border border-gray-300 px-3 py-2 w-32">
+              <span class="text-gray-400 mr-2">₹</span>
+              <input
+                type="number"
+                min="0"
+                value="0"
+                class="w-full outline-none text-sm bg-transparent" />
+            </div>
+            <span class="mx-2 text-gray-400">to</span>
+            <div
+              class="flex items-center border border-gray-300 px-3 py-2 w-32">
+              <span class="text-gray-400 mr-2">₹</span>
+              <input
+                type="number"
+                min="0"
+                value="2899"
+                class="w-full outline-none text-sm bg-transparent" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="px-8 mb-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="uppercase text-xs tracking-widest font-semibold"
+              >SIZE</span
+            >
+          </div>
+          <div
+            class="flex flex-row flex-wrap gap-3 text-xs lg:text-sm text-black">
+            <label class="flex items-center gap-1"
+              ><input type="checkbox" class="accent-black" />XS
+            </label>
+            <label class="flex items-center gap-1"
+              ><input type="checkbox" class="accent-black" />S
+            </label>
+            <label class="flex items-center gap-1"
+              ><input type="checkbox" class="accent-black" />M
+            </label>
+            <label class="flex items-center gap-1"
+              ><input type="checkbox" class="accent-black" />L
+            </label>
+            <label class="flex items-center gap-1"
+              ><input type="checkbox" class="accent-black" />XL
+            </label>
+            <label class="flex items-center gap-1"
+              ><input type="checkbox" class="accent-black" />XXL
+            </label>
+          </div>
+        </div>
+
+        <!-- Color -->
+        <div class="px-8 mb-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="uppercase text-xs tracking-widest font-semibold"
+              >COLOR</span
+            >
+          </div>
+          <div class="flex flex-wrap gap-3 text-xs lg:text-sm text-black">
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Black</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />White</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Gray</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Navy</label
+            >
+            <label class="flex items-center gap-2"
+              ><input type="checkbox" class="accent-black" />Beige</label
+            >
+          </div>
+        </div>
+
+        <!-- View Results Button -->
+        <div class="px-8 pb-8 mt-auto">
+          <button
+            class="w-full bg-black text-white py-4 tracking-widest text-base font-semibold uppercase hover:bg-white hover:text-black transition duration-300 border hover:border-black">
+            View Results
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
