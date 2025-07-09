@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nepwears</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4B5563",
+            secondary: "#e4e4e4",
+          },
+          fontFamily: {
+            aquire: ["Aquire", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .hide-scrollbar {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+    }
+  </style>
+  <script>
+    function showUserDiv(divIdToShow) {
+      const allDivs = ["div1", "div2", "div3", "div4", "div5"];
+      allDivs.forEach((id) => {
+        const div = document.getElementById(id);
+        if (id === divIdToShow) {
+          div.classList.remove("hidden");
+          div.classList.add("visible");
+        } else {
+          div.classList.remove("visible");
+          div.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="fixed left-0 right-0 top-0 bg-transparent z-50 lg:px-10 font-aquire">
+    <!-- Navigation -->
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <!-- hamburger menu -->
+      <div class="md:hidden flex items-center">
+        <button class="md:hidden text-black text-base hover:text-primary focus:outline-none" aria-label="Toggle Menu">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <!-- logo and navigation links -->
+      <a href="#Products">
+        <div class="flex items-center gap-2 pl-10 lg:pl-0">
+          <img src="../Home/assets/logo.png" alt="Nepwears Logo" class="lg:h-20 h-14" />
+        </div>
+      </a>
+      <!-- navigation links -->
+      <div class="hidden md:flex space-x-4 uppercase text-xs">
+        <a href="#" class="text-black hover:text-primary font-medium transition duration-300">shop by collection</a>
+        <a href="#" class="text-black hover:text-primary font-medium transition duration-300">best sellers</a>
+        <a href="#" class="text-black hover:text-primary font-medium transition duration-300">returns and exchanges</a>
+      </div>
+      <!-- icons -->
+      <div class="md:flex space-x-4">
+        <a href="#" class="hidden lg:block hover:text-primary text-base lg:text-xl"><i class="fa fa-user"></i></a>
+        <a href="#" class="text-black hover:text-primary text-base lg:text-xl"><i class="fa fa-search"></i></a>
+        <a href="#" class="text-black hover:text-primary text-base lg:text-xl"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="container mx-auto font-aquire px-4 pt-24 lg:pt-32 pb-24">
+      <!-- User Dashboard -->
+      <div class="flex flex-col space-y-5">
+        <!-- Dashboard Header -->
+        <div class="text-center space-y-3">
+          <div class="flex justify-center mb-2">
+            <img src="../Home/assets/constributors/aarya.jpg" alt="User Profile"
+              class="w-20 h-20 rounded-full border-2 border-black object-cover" />
+          </div>
+          <h1 class="text-2xl font-bold mb-2">User Name</h1>
+          <p class="text-xs">Manage your account and orders</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
+          <div class="p-6 border border-black">
+            <div class="flex items-center justify-between">
+              <div class="text-left">
+                <p class="md:text-base text-xs font-bold">Total Orders</p>
+                <p class="text-sm">12</p>
+              </div>
+              <div class="p-3 border border-black items-center">
+                <i class="fas fa-shopping-cart text-black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 border border-black">
+            <div class="flex items-center justify-between">
+              <div class="text-left">
+                <p class="md:text-base text-xs font-bold">Addresses</p>
+                <p class="text-sm">3</p>
+              </div>
+              <div class="p-3 border border-black items-center">
+                <i class="fas fa-map-marker-alt text-black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 border border-black">
+            <div class="flex items-center justify-between">
+              <div class="text-left">
+                <p class="md:text-base text-xs font-bold">Cart</p>
+                <p class="text-sm">2</p>
+              </div>
+              <div class="p-3 border border-black items-center">
+                <i class="fas fa-shopping-basket text-black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 border border-black">
+            <div class="flex items-center justify-between">
+              <div class="text-left">
+                <p class="md:text-base text-xs font-bold">Join Date</p>
+                <p class="text-sm">2024-01-10</p>
+              </div>
+              <div class="p-3 border border-black items-center">
+                <i class="fas fa-calendar-alt text-black"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabbed Navigation -->
+        <div class="border border-black">
+          <!-- Tab Buttons -->
+          <div class="border-b border-black">
+            <!-- Tab Navigation (with JS) -->
+            <nav class="flex items-center justify-around overflow-x-auto hide-scrollbar">
+              <button class="py-4 px-1 text-black text-center font-medium text-xs md:text-sm"
+                onclick="showUserDiv('div1')">Orders</button>
+              <button class="py-4 px-1 text-black text-center font-medium text-xs md:text-sm"
+                onclick="showUserDiv('div3')">Addresses</button>
+              <button class="py-4 px-1 text-black text-center font-medium text-xs md:text-sm"
+                onclick="showUserDiv('div4')">Cart</button>
+              <button class="py-4 px-1 text-black text-center font-medium text-xs md:text-sm"
+                onclick="showUserDiv('div2')">Account Info</button>
+              <button class="py-4 px-1 text-black text-center font-medium text-xs md:text-sm"
+                onclick="showUserDiv('div5')">Change Password</button>
+            </nav>
+          </div>
+          <!-- User Tab Content -->
+          <div class="p-6">
+            <!-- Orders Tab Content -->
+            <div class="user-orders visible" id="div1">
+              <h3 class="font-semibold text-gray-800 mb-4">My Orders</h3>
+              <div class="overflow-x-auto hide-scrollbar">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order
+                        ID</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date
+                      </th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total
+                      </th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status
+                      </th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD001</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">2024-01-15</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Rs 1,299.99</td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <span
+                          class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">Processing</span>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <button class="text-gray-600 hover:text-gray-900"><i class="fas fa-eye"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD002</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">2024-01-14</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Rs 899.99</td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <span
+                          class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Delivered</span>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <button class="text-gray-600 hover:text-gray-900"><i class="fas fa-eye"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Addresses Tab Content -->
+            <div class="user-addresses hidden" id="div3">
+              <h3 class="font-semibold text-gray-800 mb-4">My Addresses</h3>
+              <div class="space-y-4">
+                <div class="border border-black p-4 bg-gray-50">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <div class="font-semibold">Home Address</div>
+                      <div class="text-sm text-gray-600">123 Main St, Kathmandu, Nepal</div>
+                      <div class="text-sm text-gray-600">+977 9800000000</div>
+                    </div>
+                    <div class="flex gap-2">
+                      <button
+                        class="text-black hover:text-blue-500 border border-black p-2 hover:bg-black transition duration-300"><i
+                          class="fas fa-edit"></i></button>
+                      <button
+                        class="text-black hover:text-red-500 border border-black p-2 hover:bg-black transition duration-300"><i
+                          class="fas fa-trash"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="bg-black text-white px-6 py-2 text-sm font-medium hover:bg-white hover:text-black border border-black transition">Add
+                  New Address</button>
+              </div>
+            </div>
+            <!-- Cart Tab Content -->
+            <div class="user-cart hidden" id="div4">
+              <h3 class="font-semibold text-gray-800 mb-4">My Cart</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border border-black p-4 bg-gray-50 flex items-center gap-4">
+                  <img src="../Home/assets/image1.webp" alt="Product" class="w-16 h-16 object-cover" />
+                  <div>
+                    <div class="font-semibold">Summer T-Shirt</div>
+                    <div class="text-xs text-gray-500">Color: Black</div>
+                    <div class="text-xs text-gray-500">Size: M</div>
+                    <div class="text-sm text-gray-600">RS 29.99</div>
+                  </div>
+                  <button
+                    class="ml-auto text-black hover:text-red-500 border border-black p-2 hover:bg-black transition duration-300"><i
+                      class="fas fa-trash"></i></button>
+                </div>
+                <div class="border border-black p-4 bg-gray-50 flex items-center gap-4">
+                  <img src="../Home/assets/image1.webp" alt="Product" class="w-16 h-16 object-cover" />
+                  <div>
+                    <div class="font-semibold">Summer T-Shirt</div>
+                    <div class="text-xs text-gray-500">Color: White</div>
+                    <div class="text-xs text-gray-500">Size: L</div>
+                    <div class="text-sm text-gray-600">RS 29.99</div>
+                  </div>
+                  <button
+                    class="ml-auto text-black hover:text-red-500 border border-black p-2 hover:bg-black transition duration-300"><i
+                      class="fas fa-trash"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Account Info Tab Content -->
+            <div class="user-info hidden" id="div2">
+              <h3 class="font-semibold text-gray-800 mb-4">Account Information</h3>
+              <form class="max-w-xl space-y-4">
+                <div class="flex flex-col items-center mb-4">
+                  <img src="../Home/assets/constributors/aarya.jpg" alt="User Profile"
+                    class="w-20 h-20 rounded-full border-2 border-black object-cover mb-2" />
+                  <label class="block text-xs font-medium text-gray-700 mb-1">Update Profile Image</label>
+                  <div class="flex flex-col items-center w-full">
+                    <label for="profile-upload"
+                      class="cursor-pointer bg-black text-white px-4 py-2 text-xs font-medium border border-black hover:bg-white hover:text-black transition mb-1">Choose
+                      File</label>
+                    <input id="profile-upload" type="file" accept="image/*" class="hidden"
+                      onchange="document.getElementById('profile-filename').textContent = this.files[0] ? this.files[0].name : 'No file chosen'" />
+                    <span id="profile-filename" class="text-xs text-gray-600 mt-1">No file chosen</span>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1">Full Name</label>
+                  <input type="text" class="w-full border border-black px-3 py-2 text-sm focus:outline-none"
+                    value="User Name" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1">Email</label>
+                  <div class="w-full border border-black px-3 py-2 text-sm bg-gray-100">user@email.com</div>
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1">Phone</label>
+                  <input type="text" class="w-full border border-black px-3 py-2 text-sm focus:outline-none"
+                    value="+977 9800000000" />
+                </div>
+                <button type="submit"
+                  class="bg-black text-white px-6 py-2 text-sm font-medium hover:bg-white hover:text-black border border-black transition">Save
+                  Changes</button>
+              </form>
+            </div>
+            <!-- Change Password Tab Content -->
+            <div class="user-password hidden" id="div5">
+              <h3 class="font-semibold text-gray-800 mb-4">Change Password</h3>
+              <form class="max-w-md space-y-4">
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1">Current Password</label>
+                  <input type="password" class="w-full border border-black px-3 py-2 text-sm focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1">New Password</label>
+                  <input type="password" class="w-full border border-black px-3 py-2 text-sm focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1">Confirm New Password</label>
+                  <input type="password" class="w-full border border-black px-3 py-2 text-sm focus:outline-none" />
+                </div>
+                <button type="submit"
+                  class="bg-black text-white px-6 py-2 text-sm font-medium hover:bg-white hover:text-black border border-black transition">Update
+                  Password</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-whitesmoke border-t border-black font-aquire">
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <!-- Quick Links -->
+        <div class="md:text-xs">
+          <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+            Quick Links
+          </h5>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">What's Trending</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Shop All</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Popular Searches -->
+        <div class="md:text-xs">
+          <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+            Popular Searches
+          </h5>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Summer</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Winter</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Spring</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Essentials</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="md:text-xs">
+          <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+            Support
+          </h5>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Shipping Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Return Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Returns & Exchange</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-black transition duration-300 text-sm">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Subscribe Us -->
+        <div class="md:text-xs">
+          <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+            Subscribe Us
+          </h5>
+          <p class="text-gray-600 text-sm md:text-xs mb-4">
+            Sign up to our newsletter to receive exclusive offers.
+          </p>
+          <form class="mb-6">
+            <div class="flex flex-col gap-2 lg:flex-row lg:gap-0">
+              <input type="email" placeholder="E-mail"
+                class="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition duration-300 text-xs md:px-2 md:py-2 md:text-xs"
+                required />
+              <button type="submit"
+                class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition duration-300 uppercase text-xs font-medium md:px-3 md:py-2 md:text-xs">
+                Subscribe
+              </button>
+            </div>
+          </form>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-600 hover:text-black transition duration-300">
+              <i class="fab fa-facebook-f text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-black transition duration-300">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-gray-200 pt-8">
+        <p class="text-center text-sm text-gray-500">© 2025 - Nepwears</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
