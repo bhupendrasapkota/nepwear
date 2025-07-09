@@ -1251,6 +1251,8 @@
         </div>
       </section>
     </main>
+    <!-- Placeholder for dynamically loaded modal -->
+<div id="modal-container"></div>
 
     <!-- Footer -->
     <footer class="bg-whitesmoke border-t border-black font-aquire">
@@ -1425,4 +1427,25 @@
       </div>
     </footer>
   </body>
+<script>
+  const modalContainer = document.getElementById("modal-container");
+
+  document.querySelector("button:has(i.fa-plus)").addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    if (!document.getElementById("productModal")) {
+      const res = await fetch("new-product.html");
+      const html = await res.text();
+      modalContainer.innerHTML = html;
+    }
+
+    document.getElementById("productModal").classList.remove("hidden");
+  });
+
+  function closeModal() {
+    const modal = document.getElementById("productModal");
+    if (modal) modal.classList.add("hidden");
+  }
+</script>
+
 </html>
