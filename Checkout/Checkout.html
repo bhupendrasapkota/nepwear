@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .hide-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed left-0 right-0 top-0 bg-transparent z-50 lg:px-10 font-aquire">
+      <!-- Navigation -->
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <!-- hamburger menu -->
+        <div class="md:hidden flex items-center">
+          <button
+            class="md:hidden text-black text-base hover:text-primary focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- logo and navigation links -->
+        <a href="#home">
+          <div class="flex items-center gap-2 pl-10 lg:pl-0">
+            <img
+              src="../Home/assets/logo.png"
+              alt="Nepwears Logo"
+              class="lg:h-20 h-14" />
+          </div>
+        </a>
+        <!-- navigation links -->
+        <div class="hidden md:flex space-x-4 uppercase text-xs">
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >shop by collection</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >best sellers</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >returns and exchanges</a
+          >
+        </div>
+        <!-- icons -->
+        <div class="md:flex space-x-4">
+          <a
+            href="#"
+            class="hidden lg:block hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-user"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-search"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-shopping-cart"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="pt-20 pb-16 min-h-screen">
+        <div class="container mx-auto px-4 pt-4 lg:px-8">
+          <!-- Page Header -->
+          <div class="flex flex-col items-center mb-8">
+            <h1 class="text-4xl font-aquire font-bold text-black mb-2">
+              Checkout
+            </h1>
+            <p class="text-gray-600">Complete your purchase</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
+            <!-- Left Column - Checkout Forms -->
+            <div class="lg:col-span-2 space-y-8">
+              <!-- Shipping Information -->
+              <div class="bg-white border border-black p-6">
+                <h2 class="text-xl font-aquire font-semibold text-black mb-6">
+                  Shipping Information
+                </h2>
+
+                <!-- Saved/New Address Toggle -->
+                <div class="mb-4">
+                  <label class="flex items-center space-x-2">
+                    <input
+                      type="radio"
+                      name="shippingAddressOption"
+                      value="saved"
+                      checked
+                      class="text-black focus:ring-black" />
+                    <span class="text-sm text-black font-medium"
+                      >Use saved shipping address</span
+                    >
+                  </label>
+                  <label class="flex items-center space-x-2 mt-2">
+                    <input
+                      type="radio"
+                      name="shippingAddressOption"
+                      value="new"
+                      class="text-black focus:ring-black" />
+                    <span class="text-sm text-black font-medium"
+                      >Enter a new shipping address</span
+                    >
+                  </label>
+                </div>
+
+                <!-- Saved Address Card -->
+                <div class="mb-6 p-4 border border-gray-300 bg-gray-50 rounded">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="font-semibold text-black">Aarya Sharma</div>
+                      <div class="text-sm text-gray-700">aarya@example.com</div>
+                      <div class="text-sm text-gray-700">+977-9800000000</div>
+                      <div class="text-sm text-gray-700">
+                        Kathmandu, Bagmati, 44600
+                      </div>
+                      <div class="text-sm text-gray-700">Nepal</div>
+                    </div>
+                    <i class="fa fa-check-circle text-green-600 text-2xl"></i>
+                  </div>
+                </div>
+
+                <!-- Shipping Form -->
+                <div id="shippingFormSection">
+                  <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label
+                          for="firstName"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >First Name *</label
+                        >
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                      </div>
+                      <div>
+                        <label
+                          for="lastName"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >Last Name *</label
+                        >
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Email Address *</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                    </div>
+
+                    <div>
+                      <label
+                        for="phone"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Phone Number *</label
+                      >
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+977-XXXXXXXXX"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                    </div>
+
+                    <div>
+                      <label
+                        for="address1"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Address Line 1 *</label
+                      >
+                      <input
+                        type="text"
+                        id="address1"
+                        name="address1"
+                        placeholder="Street address, P.O. box, company name"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                    </div>
+
+                    <div>
+                      <label
+                        for="address2"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Address Line 2</label
+                      >
+                      <input
+                        type="text"
+                        id="address2"
+                        name="address2"
+                        placeholder="Apartment, suite, unit, building, floor, etc."
+                        class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div>
+                        <label
+                          for="city"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >City *</label
+                        >
+                        <input
+                          type="text"
+                          id="city"
+                          name="city"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                      </div>
+                      <div>
+                        <label
+                          for="state"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >State/Province *</label
+                        >
+                        <input
+                          type="text"
+                          id="state"
+                          name="state"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                      </div>
+                      <div>
+                        <label
+                          for="postalCode"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >Postal Code *</label
+                        >
+                        <input
+                          type="text"
+                          id="postalCode"
+                          name="postalCode"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        for="country"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Country *</label
+                      >
+                      <div class="relative">
+                        <select
+                          id="country"
+                          name="country"
+                          required
+                          disabled
+                          class="appearance-none w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-gray-100 cursor-not-allowed">
+                          <option value="nepal" selected>Nepal</option>
+                        </select>
+                      </div>
+                      <p class="text-xs text-gray-500 mt-1">
+                        Currently shipping to Nepal only
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="bg-white border border-gray-200 p-6">
+                <h2 class="text-xl font-aquire font-semibold text-black mb-6">
+                  Payment Method
+                </h2>
+
+                <div class="space-y-4">
+                  <!-- Cash on Delivery -->
+                  <label for="cod" class="block cursor-pointer">
+                    <div
+                      class="flex items-center justify-between p-4 border border-gray-200 hover:border-black transition duration-300 rounded-md"
+                      id="codOption">
+                      <div class="flex items-center space-x-3">
+                        <input
+                          type="radio"
+                          id="cod"
+                          name="paymentMethod"
+                          value="cod"
+                          class="text-black focus:ring-black"
+                          style="accent-color: black" />
+                        <div
+                          class="flex items-center justify-between space-x-3">
+                          <i
+                            class="fa fa-money-bill-wave text-2xl text-green-600"></i>
+                          <div>
+                            <span class="font-medium text-black"
+                              >Cash on Delivery</span
+                            >
+                            <p class="text-xs text-gray-600">
+                              Pay when you receive your order
+                            </p>
+                          </div>
+                          <span class="text-sm text-gray-500 text-center"
+                            >No extra charge</span
+                          >
+                        </div>
+                      </div>
+                      <span id="codTick" class="hidden text-green-600 text-xl"
+                        ><i class="fa fa-check-circle"></i
+                      ></span>
+                    </div>
+                  </label>
+
+                  <!-- Khalti Digital Payment -->
+                  <label for="khalti" class="block cursor-pointer">
+                    <div
+                      class="flex items-center justify-between p-4 border border-gray-200 hover:border-black transition duration-300 rounded-md"
+                      id="khaltiOption">
+                      <div class="flex items-center space-x-3">
+                        <input
+                          type="radio"
+                          id="khalti"
+                          name="paymentMethod"
+                          value="khalti"
+                          class="text-black focus:ring-black"
+                          style="accent-color: black" />
+                        <div
+                          class="flex items-center justify-between space-x-4">
+                          <i
+                            class="fa fas fas fa-money-check text-2xl text-violet-900"></i>
+                          <div>
+                            <span class="font-medium text-black"
+                              >Khalti Digital Payment</span
+                            >
+                            <p class="text-xs text-gray-600">
+                              Pay securely with Khalti wallet
+                            </p>
+                          </div>
+                          <span class="text-sm text-gray-500 text-center"
+                            >Instant payment</span
+                          >
+                        </div>
+                      </div>
+                      <span
+                        id="khaltiTick"
+                        class="hidden text-violet-700 text-xl"
+                        ><i class="fa fa-check-circle"></i
+                      ></span>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Additional Information for COD -->
+                <div
+                  id="codInfo"
+                  class="mt-4 p-4 bg-blue-50 border border-blue-200">
+                  <div class="flex items-start space-x-2">
+                    <i class="fa fa-info-circle text-blue-600 mt-1"></i>
+                    <div>
+                      <h4 class="font-medium text-blue-900 text-sm">
+                        Cash on Delivery Information
+                      </h4>
+                      <ul class="text-sm text-blue-800 mt-1 space-y-1">
+                        <li>• Payment will be collected upon delivery</li>
+                        <li>• Please have exact change ready</li>
+                        <li>• You can inspect the items before payment</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Additional Information for Khalti -->
+                <div
+                  id="khaltiInfo"
+                  class="mt-4 p-4 bg-purple-50 border border-purple-200 rounded-md hidden">
+                  <div class="flex items-start space-x-2">
+                    <i class="fa fa-info-circle text-purple-600 mt-1"></i>
+                    <div>
+                      <h4 class="font-medium text-purple-900 text-sm">
+                        Khalti Payment Information
+                      </h4>
+                      <ul class="text-sm text-purple-800 mt-1 space-y-1">
+                        <li>• You'll be redirected to Khalti for payment</li>
+                        <li>
+                          • Ensure you have sufficient balance in your Khalti
+                          wallet
+                        </li>
+                        <li>• Payment is processed securely and instantly</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="lg:col-span-1">
+              <div class="bg-white border border-gray-200 p-6 sticky top-24">
+                <h2 class="text-xl font-aquire font-semibold text-black mb-6">
+                  Order Summary
+                </h2>
+
+                <!-- Order Items -->
+                <div
+                  class="space-y-4 mb-6 max-h-96 overflow-y-auto hide-scrollbar pr-2">
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="../Home/assets/image1.webp"
+                      alt="Product"
+                      class="w-16 h-24 object-cover" />
+                    <div class="flex-1">
+                      <h3 class="font-medium text-black">
+                        Classic White T-Shirt
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Size: M | Color: White
+                      </p>
+                      <p class="text-sm text-gray-600">Qty: 1</p>
+                    </div>
+                    <span class="font-medium text-black">$29.99</span>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="../Home/assets/image1.webp"
+                      alt="Product"
+                      class="w-16 h-24 object-cover" />
+                    <div class="flex-1">
+                      <h3 class="font-medium text-black">
+                        Classic White T-Shirt
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Size: M | Color: White
+                      </p>
+                      <p class="text-sm text-gray-600">Qty: 1</p>
+                    </div>
+                    <span class="font-medium text-black">$29.99</span>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="../Home/assets/image1.webp"
+                      alt="Product"
+                      class="w-16 h-24 object-cover" />
+                    <div class="flex-1">
+                      <h3 class="font-medium text-black">
+                        Classic White T-Shirt
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Size: M | Color: White
+                      </p>
+                      <p class="text-sm text-gray-600">Qty: 1</p>
+                    </div>
+                    <span class="font-medium text-black">$29.99</span>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="../Home/assets/image1.webp"
+                      alt="Product"
+                      class="w-16 h-24 object-cover" />
+                    <div class="flex-1">
+                      <h3 class="font-medium text-black">
+                        Classic White T-Shirt
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Size: M | Color: White
+                      </p>
+                      <p class="text-sm text-gray-600">Qty: 1</p>
+                    </div>
+                    <span class="font-medium text-black">$29.99</span>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="../Home/assets/image1.webp"
+                      alt="Product"
+                      class="w-16 h-24 object-cover" />
+                    <div class="flex-1">
+                      <h3 class="font-medium text-black">
+                        Classic White T-Shirt
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Size: M | Color: White
+                      </p>
+                      <p class="text-sm text-gray-600">Qty: 1</p>
+                    </div>
+                    <span class="font-medium text-black">$29.99</span>
+                  </div>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="border-t border-gray-200 pt-4 space-y-3">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-600">Subtotal</span>
+                    <span class="text-black">$89.98</span>
+                  </div>
+                  <div
+                    class="border-t border-gray-200 pt-3 font-aquire tracking-widest">
+                    <div class="flex justify-between font-semibold text-lg">
+                      <span class="text-black">Total</span>
+                      <span class="text-black">$89.98</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Place Order Button -->
+                <button
+                  type="submit"
+                  class="w-full mt-6 bg-black text-white py-4 px-6 hover:bg-white hover:text-black border hover:border-black transition duration-300 font-aquire text-lg">
+                  Place Order
+                </button>
+
+                <!-- Security Notice -->
+                <div class="mt-4 text-center">
+                  <p class="text-xs text-gray-500">
+                    <i class="fa fa-lock mr-1"></i>
+                    Your payment information is secure and encrypted
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-whitesmoke border-t border-black font-aquire">
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Quick Links -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Quick Links
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >What's Trending</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shop All</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Searches -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Popular Searches
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Summer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Winter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Spring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Essentials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Support
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Us -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Subscribe Us
+            </h5>
+            <p class="text-gray-600 text-sm md:text-xs mb-4">
+              Sign up to our newsletter to receive exclusive offers.
+            </p>
+            <form class="mb-6">
+              <div class="flex flex-col gap-2 lg:flex-row lg:gap-0">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition duration-300 text-xs md:px-2 md:py-2 md:text-xs"
+                  required />
+                <button
+                  type="submit"
+                  class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition duration-300 uppercase text-xs font-medium md:px-3 md:py-2 md:text-xs">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-facebook-f text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-instagram text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200 pt-8">
+          <p class="text-center text-sm text-gray-500">© 2025 - Nepwears</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
