@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepwears</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/aquire" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4B5563",
+              secondary: "#e4e4e4",
+            },
+            fontFamily: {
+              aquire: ["Aquire", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hide-scrollbar {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed left-0 right-0 top-0 bg-transparent z-50 lg:px-10 font-aquire">
+      <!-- Navigation -->
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <!-- hamburger menu -->
+        <div class="md:hidden flex items-center">
+          <button
+            class="md:hidden text-black text-base hover:text-primary focus:outline-none"
+            aria-label="Toggle Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- logo and navigation links -->
+        <a href="#Products">
+          <div class="flex items-center gap-2 pl-10 lg:pl-0">
+            <img
+              src="../Home/assets/logo.png"
+              alt="Nepwears Logo"
+              class="lg:h-20 h-14" />
+          </div>
+        </a>
+        <!-- navigation links -->
+        <div class="hidden md:flex space-x-4 uppercase text-xs">
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >shop by collection</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >best sellers</a
+          >
+          <a
+            href="#"
+            class="text-black hover:text-primary font-medium transition duration-300"
+            >returns and exchanges</a
+          >
+        </div>
+        <!-- icons -->
+        <div class="md:flex space-x-4">
+          <a
+            href="#"
+            class="hidden lg:block hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-user"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-search"></i
+          ></a>
+          <a href="#" class="text-black hover:text-primary text-base lg:text-xl"
+            ><i class="fa fa-shopping-cart"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Order Details Section -->
+      <section class="pt-32 pb-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+          <!-- Header and Order id-->
+          <div class="text-center mb-8">
+            <h1
+              class="text-3xl md:text-4xl font-aquire font-bold text-black mb-4">
+              Order Details
+            </h1>
+
+            <p class="text-gray-600 text-sm md:text-base">
+              Order #NEP123456789
+            </p>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="bg-white border border-gray-200 p-6 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Order Info -->
+              <div>
+                <h3 class="text-lg font-semibold text-black mb-4">
+                  Order Information
+                </h3>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Order Date:</span>
+                    <span class="font-medium">January 15, 2025</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Order Status:</span>
+                    <span class="text-green-600 font-medium">Delivered</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Delivery Date:</span>
+                    <span class="font-medium">January 20, 2025</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Payment Method:</span>
+                    <span class="font-medium">Credit Card</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shipping Address -->
+              <div>
+                <h3 class="text-lg font-semibold text-black mb-4">
+                  Shipping Address
+                </h3>
+                <div class="text-sm text-gray-600">
+                  <p class="font-medium text-black">John Doe</p>
+                  <p>123 Main Street</p>
+                  <p>Apt 4B</p>
+                  <p>New York, NY 10001</p>
+                  <p>United States</p>
+                  <p class="mt-2">Phone: (555) 123-4567</p>
+                </div>
+              </div>
+
+              <!-- Order Total -->
+              <div>
+                <h3 class="text-lg font-semibold text-black mb-4">
+                  Order Summary
+                </h3>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Subtotal:</span>
+                    <span>$89.98</span>
+                  </div>
+                  <div class="border-t pt-2 flex justify-between font-semibold">
+                    <span>Total:</span>
+                    <span>$89.98</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Items return and exchange fileds with reasons contains -->
+          <div class="bg-white border border-gray-200 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-black mb-6">Order Items</h3>
+
+            <!-- Item 1 -->
+            <div
+              class="flex flex-col gap-y-2 border-b border-gray-200 pb-6 mb-6">
+              <div class="flex flex-col md:flex-row gap-4">
+                <!-- Product Image-->
+                <div class="w-24 h-24 bg-gray-100 flex-shrink-0">
+                  <img
+                    src="../Home/assets/image1.webp"
+                    alt="Product"
+                    class="w-full h-full object-cover" />
+                </div>
+                <!-- Product Details -->
+                <div class="flex-1">
+                  <div
+                    class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <!-- product details -->
+                    <div class="flex-1">
+                      <h4 class="font-medium text-black">
+                        Classic Cotton T-Shirt
+                      </h4>
+                      <p class="text-sm text-gray-600">
+                        Size: M | Color: White
+                      </p>
+                      <p class="text-sm text-gray-600">Quantity: 1</p>
+                      <p class="text-sm font-medium">$29.99</p>
+                    </div>
+                    <!-- Labels for selection return and exchanges means buttons-->
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                      <!--none-->
+                      <label>
+                        <input
+                          type="radio"
+                          name="item1"
+                          value="none"
+                          class="sr-only peer"
+                          checked />
+                        <span
+                          class="px-4 py-2 border border-black text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black cursor-pointer transition"
+                          >None</span
+                        >
+                      </label>
+                      <!--Return-->
+                      <label>
+                        <input
+                          type="radio"
+                          name="item1"
+                          value="return"
+                          class="sr-only peer" />
+                        <span
+                          class="px-4 py-2 border border-black text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black cursor-pointer transition"
+                          >Return</span
+                        >
+                      </label>
+                      <!-- Exchanges-->
+                      <label>
+                        <input
+                          type="radio"
+                          name="item1"
+                          value="exchange"
+                          class="sr-only peer" />
+                        <span
+                          class="px-4 py-2 border border-black text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black cursor-pointer transition"
+                          >Exchange</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item 1 fields: always visible, no id attributes -->
+              <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
+                <!-- Return Reason fields -->
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1"
+                    >Return Reason</label
+                  >
+                  <select
+                    name="return-reason-item1"
+                    class="w-full border border-black px-3 py-2 text-sm focus:outline-none">
+                    <option value="">Select a reason</option>
+                    <option>Wrong Size</option>
+                    <option>Not as Described</option>
+                    <option>Changed Mind</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <!-- Exchanges Reason fields -->
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1"
+                    >Exchange Reason</label
+                  >
+                  <select
+                    name="exchange-reason-item1"
+                    class="w-full border border-black px-3 py-2 text-sm focus:outline-none">
+                    <option value="">Select a reason</option>
+                    <option>Wrong Size</option>
+                    <option>Wrong Color</option>
+                    <option>Received Damaged</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <!--Size selection of current product -->
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1"
+                    >New Size</label
+                  >
+                  <select
+                    name="new-size-item1"
+                    class="w-full border border-black px-3 py-2 text-sm focus:outline-none">
+                    <option value="">Select size</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </div>
+                <!-- Color selection of current product -->
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-1"
+                    >New Color</label
+                  >
+                  <select
+                    name="new-color-item1"
+                    class="w-full border border-black px-3 py-2 text-sm focus:outline-none">
+                    <option value="">Select color</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Blue</option>
+                    <option>Red</option>
+                    <option>Green</option>
+                  </select>
+                </div>
+                <!--Additional Detail text area-->
+                <div class="col-span-1 lg:col-span-2 mt-2">
+                  <label class="block text-xs font-medium text-gray-700 mb-1"
+                    >Additional Details</label
+                  >
+                  <textarea
+                    name="details-item1"
+                    rows="3"
+                    class="w-full border border-black px-3 py-2 text-sm focus:outline-none"
+                    placeholder="Write any additional information here..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg p-6 font-aquire">
+            <div class="flex flex-col sm:flex-row gap-2">
+              <!--Process button -->
+              <button
+                class="flex-1 bg-black text-white py-3 px-6 hover:bg-white hover:text-black border hover:border-black transition duration-300 font-medium">
+                Start Process
+              </button>
+              <!-- Contact Support button -->
+              <button
+                class="flex-1 border border-black text-black py-3 px-6 hover:bg-black hover:text-white transition duration-300 font-medium">
+                Contact Support
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-whitesmoke border-t border-black font-aquire">
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Quick Links -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Quick Links
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >What's Trending</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shop All</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Searches -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Popular Searches
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Summer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Winter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Spring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Essentials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Support
+            </h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-black transition duration-300 text-sm"
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Us -->
+          <div class="md:text-xs">
+            <h5 class="uppercase font-semibold mb-6 text-black tracking-wide">
+              Subscribe Us
+            </h5>
+            <p class="text-gray-600 text-sm md:text-xs mb-4">
+              Sign up to our newsletter to receive exclusive offers.
+            </p>
+            <form class="mb-6">
+              <div class="flex flex-col gap-2 lg:flex-row lg:gap-0">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition duration-300 text-xs md:px-2 md:py-2 md:text-xs"
+                  required />
+                <button
+                  type="submit"
+                  class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition duration-300 uppercase text-xs font-medium md:px-3 md:py-2 md:text-xs">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-facebook-f text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-black transition duration-300">
+                <i class="fab fa-instagram text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200 pt-8">
+          <p class="text-center text-sm text-gray-500">© 2025 - Nepwears</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
