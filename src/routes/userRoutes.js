@@ -6,4 +6,6 @@ const route = express.Router();
 route.get("/", userController.getUserData);
 route.get("/:id", userController.getUserById);
 
+route.post("/create", userController.createusers)
+
 export default route;

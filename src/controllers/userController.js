@@ -16,4 +16,13 @@ const getUserById = (req, res) => {
   res.json(user);
 };
 
-export default { getUserData, getUserById };
+const createusers = (req, res) => {
+  if (req.body) {
+    userService.createuser(req.body);
+    res.send("User was created sucessfully");
+  } else {
+    res.send("there was an error");
+  }
+};
+
+export default { getUserData, getUserById, createusers };

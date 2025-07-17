@@ -1,7 +1,7 @@
 import fs from "fs";
 
 const data = fs.readFileSync("./src/data/users.json", "utf8");
-const parseddata = JSON.parse(data).data;
+const parseddata = JSON.parse(data);
 
 const getUserData = () => {
   const data = parseddata.map((user) => {
@@ -16,16 +16,22 @@ const getUserData = () => {
 };
 
 const getUserById = (id) => {
-    const founduser = parseddata.find((user) => user._id === parseInt(id));
-    if (!founduser) {
-        return null;
-    }
-    return {
-        id: founduser._id,
-        name: founduser.name,
-        email: founduser.email,
-        phone: founduser.phone,
-    };
+  const founduser = parseddata.find((user) => user._id === parseInt(id));
+  if (!founduser) {
+    return null;
+  }
+  return {
+    id: founduser._id,
+    name: founduser.name,
+    email: founduser.email,
+    phone: founduser.phone,
+  };
 };
 
-export default { getUserData, getUserById };
+const createuser = (data) => {
+  parseddata.push(data);
+
+  fs.writeFileSync("./src/data/users.json", JSON.stringify(parseddata));
+};
+
+export default { getUserData, getUserById, createuser };
